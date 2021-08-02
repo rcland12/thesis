@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% Main Thesis TeX Document %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,oneside]{report}
+\usepackage{
+    gsuthesisETD,
+    multicol,
+    amssymb,
+    amsthm,
+    amsmath,
+    graphicx,
+    geometry,
+    float,
+    times,
+}
+\newcommand{\theoremheaderfont}{\scshape}
+\geometry{
+    letterpaper,
+    left=1.5in,
+    right=1in,
+    top=1in,
+    bottom=1in,
+    headheight=12pt,
+    headsep=20pt,
+    footskip=1in
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% %Toggles: "true" or "false" %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tablespagetrue
+\figurespagetrue
+%\symbolpagetrue
+%\dedicationpagetrue
+\acknowledgmentspagetrue
+\copyrightpagetrue
+\sectionnumberstrue
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Fill in These Fields %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Bias of Rank Correlation Under a Mixture Model}
+\author{Russell Charles Land}
+\degree{Master of Science}
+\major{Mathematics}
+\dept{Mathematical Sciences}
+\school{Georgia Southern University}
+\thesistype{Thesis}
+\graduatedate{May 2021}
+\graduateyear{2021}
+\keywords{
+    Rank correlation,
+    Copula,
+    Mixture model,
+    Spearman Rho,
+    Kendall Tau,
+    Cumulative distribution function,
+    Bias
+}
+\msc{15A15, 41A10}
+\cochair=0
+%\symbolfile{symbols}
+\appendname{APPENDIX}
+\tocheader{Appendices}
+\mybibname{REFERENCES}
+\def\deansname{Dr. Stephen Carden}
+\committeechair{Stephen Carden}
+\memberB{Divine Wanduku}
+\memberC{Arpita Chatterjee}
+\degreeA{M.S., Georgia Southern University, 2021}
+\degreeB{B.S., Georgia Southern University, 2019}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{ass}[theorem]{Assumption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% MISCELLANEOUS %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mdframed,hyperref}
+\setlength\parindent{24pt}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\sign}{sign}
+\allowdisplaybreaks
+\bibliographystyle{ieeetr}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Main Document %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+  \input{abstract}
+  \titlep
+  \copyrightpage
+  \approvalpage
+  %\input{dedication}
+  \input{acknowledgments}
+  \tableofcontents
+  \include{chap1}
+  \include{chap2}
+  \include{chap3}
+  \include{chap4}
+  \include{chap5}
+  \bibliography{bibliography.bib}
+
+\end{document}
